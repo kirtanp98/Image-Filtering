@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <title>Home</title>
+</head>
+
+<script>
+function toggle_display(){
+  el = document.querySelector('.spinner-border');
+  
+  if(el.style.visibility == 'hidden'){
+      el.style.visibility = 'visible'
+  }else{
+     el.style.visibility = 'hidden'
+  }
+}
+
+function toggle_compress(){
+  el = document.querySelector('.compress-toggle');
+  
+  if(el.style.visibility == 'hidden'){
+      el.style.visibility = 'visible'
+  }else{
+     el.style.visibility = 'hidden'
+  }
+}
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand"">Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+    <div class="container">
+        <h1>Upload an Image and Pick Filter</h1>
+        <!-- <form id= "upload-form" method="POST" action="{{ url_for('result') }}" enctype="multipart/form-data"> -->
+        <form id= "upload-form" method="POST" action="{{ url_for('result') }}" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <!-- <label for="exampleFormControlFile1">Upload Image</label> -->
+                <!-- <input type="file" accept="image/*" id="imageUpload" multiple> -->
+                <!-- <input type=file name=file> -->
+                <input type="file" name =file accept="image/*" id="imageUpload">
+            </div>
+        <!-- </form>
+        <form method="POST" action=""> -->
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Select Function</label>
+                <select name="comp_select" class="form-control" id="exampleFormControlSelect1">
+                    <option value="bnw">Black and White</option>
+                    <option value="noiser">Noiser</option>
+                    <option value="spiral">Spiral</option>
+                    <option value="scrambler">Scrambler</option>
+                    <option value="staticSpook">Static Spook</option>
+                    <option value="glassDoor">Glass Door</option>
+                    <option value="bubble">Red Bubble</option>
+                    <option value="blocks">Blocks</option>
+                    <option value="waves">Waves</option>
+                    <option value="circ">Uh Circle</option>
+                    <option value="pixellate">Pixellate</option>
+                    <option value="mirror">Mirror</option>
+                    <option value="upsideDown">Upside Down</option>
+                    <option value="sepia">Sepia</option>
+                    <option value="hardSpiral">Spiral 2</option>
+                    <option value="blueOverlay">I &hearts; Blues Clues</option>
+                </select>
+            </div>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary btn-lg btn-block">
+                  <input type="checkbox" checked autocomplete="off" value="compressed" name = "compress"> Compress
+                </label>
+            </div>
+            <br>
+
+            <input type="submit" onclick="toggle_display()" class="btn btn-primary btn-lg btn-block"></input>
+        </form>
+    </div>
+
+    <br>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" style="visibility: hidden;"  role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <br>
+
+    
+
+    <p class="text-center" style="color: #7e7e7e">Warning: If you choice not to compress the image, then it will take a long time to process the image if it's large.</p>
+    <p class="text-center" style="color: #b1b1b1">If you have questions or want to learn more about how we process the images, please go to our about page.</p>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+
+    <title>About</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+            </div>
+    </nav>
+
+
+    <div class="container">
+
+        <h2>About</h2>
+        <p class="text-justify">Our app allow users to pass in an image and choose a filter they want to apply. Our application uses Quart, a micro web framework based on Python. This allows us to create a website for our application to run on. Quart is a based on a similar framework called Flask, but Quart uses Python's built in asyncio to increase performance. In order for the images to process, we used libraries such as NumPy, OpenCV2, skimage, scipy, and matplotlib. Our website is based on our desktop application, but we wanted users to use our application on any platform to have a better experience with a more appealing UI.</p>
+
+        <h2>FAQ</h2>
+        <p class="text-monospace">How do I use this website?</p>
+        <p class="text-justify">It's easy! Just upload an image and select a filter you want to apply. You also have the choice of compressing your image to speed up the image processing.</p>
+
+        <p class="text-monospace">Why is it taking forever to process the image? &#128545;</p>
+        <p class="text-justify"> Due to the way we process the image, larger and complicated filters take up a large amount of time. However, the image will eventually be done. By compressing your image, the filtering process will take a lot less time.</p>
+
+        <p class="text-monospace">What does the compressing do to the image?</p>
+        <p class="text-justify">By toggling on the compress button, your image will become 50% of its original size. By doing this, it allows the filters to run faster.</p>
+
+        <p class="text-monospace">What files am I allowed to upload?</p>
+        <p class="text-justify">The website allows you to upload PNG and JPEG images. The resulting image will be in PNG format.</p>
+
+        <p class="text-monospace">I want to learn more about this webiste works, where can I look at the source code?</p>
+        <p class="text-justify">Please go to our repository <a href="https://github.com/kirtanp98/Image-Filtering" class="badge badge-dark">github</a> repository</p>
+
+        <p class="text-monospace">Wow, this website is amazing!! How do I support you guys?</p>
+        <p class="text-justify">Thanks! To support to us, please give us a good grade. &#128520;</p>
+
+        <br>
+        <p class="font-weight-light">Made by Tim and Kirtan</p>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
