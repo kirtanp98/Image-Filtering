@@ -9,6 +9,7 @@ cycler==0.10.0
 decorator==4.4.0
 defusedxml==0.6.0
 entrypoints==0.3
+Flask==1.0.2
 gunicorn==19.9.0
 h11==0.8.1
 h2==3.1.0
@@ -72,5 +73,6 @@ traitlets==4.3.2
 typing-extensions==3.7.2
 wcwidth==0.1.7
 webencodings==0.5.1
+Werkzeug==0.15.2
 widgetsnbextension==3.4.2
 wsproto==0.14.0
